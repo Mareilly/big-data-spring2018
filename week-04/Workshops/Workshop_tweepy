@@ -1,0 +1,19 @@
+import jsonpickle
+import tweepy
+import pandas as pd
+
+import os
+
+
+os.chdir('week-04')
+from twitter_keys import api_key, api_secret
+twython_setup = Twython(APP_KEY, APP_SECRET, oauth_version=2)
+
+import time
+import threading
+from datetime import datetime
+import tweepy
+api_key = "xsE4xretz5Xj3eExoj1iPUDzu"
+api_secret = "MTkLgrOi4AQWkdrtWs7OobhJzHgcvsCte3CzdXDjflxZD6YJSG"
+
+from twitter_key import api_key, api_secret

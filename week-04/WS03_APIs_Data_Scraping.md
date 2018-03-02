@@ -220,6 +220,8 @@ This function will run as is, allowing you to download Tweets to a `.json` file-
 
 We are going to create a function to parse the result into a Python `Series` that contains the things that we are interested in. Series are sort of like DataFrames with a single row; this makes sense because we are parsing our returned tweets tweet-by-tweet, meaning that we'll never have more than one tweet at a time hitting our parser. The returned object is a Python Series, which our above function can append to a DataFrame.
 
+#use jsonviewer.stack.hu to view tweets i
+
 ```python
 def parse_tweet(tweet):
   p = pd.Series()
