@@ -2,10 +2,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pylab as plt
 
-# This line lets us plot on our ipython notebook
 %matplotlib inline
 
-# Read in the data
 
 df = pd.read_csv('week-03/data/skyhook_2017-07.csv', sep=',')
 df.head()
