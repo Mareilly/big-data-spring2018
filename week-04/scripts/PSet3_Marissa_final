@@ -120,6 +120,7 @@ df.head()
 tweets.dtypes
 tweets['location'].unique()
 
+df.to_csv('tweet_data.csv', sep=',', encoding='utf-8')
 #PROBLEM 2 - CLEAN Z DATA
 
 boston_list = df[df['location'].str.contains("Boston", case=False)]['location']
@@ -284,8 +285,9 @@ plt.show()
 
 #PROBLEM 7
 
-tweet_loc=tweets[tweets['location'] != "]tweet_loc.to_csv('tweets.csv',sep=;;index=False)
-tweet_loc.to_csv('twitter_data.csv', sep=',', encoding='utf-8')
+tweets.to_csv('tweet_data.csv', sep=',', encoding='utf-8')
+
+cleaner_tweets.to_csv('twitter_data.csv', sep=',', encoding='utf-8')
 #^Having trouble getting df to write to csv. Ill check in with teaching staff.
 
 weather.to_csv('weathertweets_data.csv', sep=',', encoding='utf-8')

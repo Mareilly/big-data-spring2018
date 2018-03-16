@@ -99,8 +99,8 @@ Where NIR stands for near-infrared and red is light reflected in the red region.
 Okay, enough biophysics! Let's calculate the NDVI. We begin by reading in our files.
 
 ```python
-b4_raster = os.path.join(DATA, 'b4.tif')
-b5_raster = os.path.join(DATA, 'b5.tif')
+b4_raster = os.path.join(DATA, 'picture.tif')
+b5_raster = os.path.join(DATA, 'picture2.tif')
 
 # Load in Red band
 red_data = gdal.Open(b4_raster)
