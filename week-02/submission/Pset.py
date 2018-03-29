@@ -5,15 +5,23 @@ print snakes[2] #A2 Print the 3rd item in the list - remember how Python indexes
 print snakes [0:2] #A3 Print the 1st and 2nd item in the list using [:] index slicing.
 snakes.append("last") #A4 Add a new string with text “last” to the end of the list and print the list.
 print(snakes)
-print len(snakes #A5Get the list length and print it.
+print len(snakes) #A5Get the list length and print it.
+
+## Yes, but could also use negative indexing (i.e., snakes[-1] = 'new')
 snakes[snakes.index('last')] = 'new' #A6 Replace the last item in the list with the string “new” and print
 print snakes
 
 #PART B
 sentence_words = ['I', 'am', 'learning', 'Python', 'to', 'munge', 'large', 'datasets', 'and', 'visualize', 'them']
-print ''.join(sentence_words) #B1
-print ''.join(reversed(sentence_words)) #B2
-print sentence_words.sort() #B3
+
+# Should be...
+print (' '.join(sentence_words))
+
+print (''.join(sentence_words)) #B1
+print (''.join(reversed(sentence_words))) #B2
+sentence_words.sort() #B3
+
+sentence_words
 print "".join(sorted(sentence_words)) #B4
 # The sorted function returns a new sorted list and leaves the original list in tact, Sort is an in-place operation and returns "none".
 
@@ -33,6 +41,7 @@ assert(50 <= my_random(100, x = 50) <= 100)
 #PART D
 def book_list (title, num):
     x = "The number {num} bestseller today is {title}".format
+    print(x)
     return x
 book_list("Sapiens", 1)
 
@@ -74,4 +83,5 @@ def power(num,pow):
     number=number*num
   return number
 power(2,3)
+power(1, 0)
 #this code created with help from human who goes by A-B-B (Stack OverFlow)
