@@ -6,6 +6,10 @@ import matplotlib.pylab as plt
 
 
 df = pd.read_csv('week-03/data/skyhook_2017-07.csv', sep=',')
+
+# read in for PH
+df = pd.read_csv('/Users/phoebe/Dropbox (MIT)/big-data/data/skyhook_2017-07.csv', sep=',')
+
 df.head()
 # Create a new date column formatted as datetimes.
 df['date_new'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
@@ -35,6 +39,7 @@ for i in range(0, 168, 24):
 df.head()
 
 #PROBLEM 1 - Need I say this graph is gorgeous?!
+## Agree! Love the color choice! - PH
 by_date = df['count'].groupby(df['date_new']).sum()
 by_date
 by_date .plot.bar(title= 'GPS pings', color='#FFC222')
@@ -75,6 +80,9 @@ by_date.plot.scatter(x='lat',y='lon',s=df['count']*0.5,alpha=0.3,title ="Scatter
 
 by_date=df[df['time_date']=='2017-07-0029T12:00:00.000000000']
 by_date.plot.scatter(x='lat',y='lon',s=df['count']*0.5,alpha=0.3,title ="Scatterplot of latitude and longitude on July 29th 2017 at 12:00")
+
+## Marissa, your 'maps' are lovely, but you have switched your lat and lon. x is lon and y is lat, so this will make interpreting your map difficult!
+
 
 #PROBLEM 6 WOOOHOOO I MADE IT!
 Scatterplot of latitude and longitude on Sunday, July 2st at 7am
