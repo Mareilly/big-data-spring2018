@@ -1,0 +1,73 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Learning D3</title>
+    <meta charset="utf-8">
+    <script scr="https://d3js.org/d3.v4.is" charset="utf-8" ></script>
+</head>
+<body>
+    <!-- 40,90,30,60 -->
+    <!-- <svg width="160" height="180">
+        <rect x="30" width="20" height="40" fill="steelblue"></rect>
+        <rect x="55" width="20" height="90" fill="steelblue"></rect>
+        <rect x="80" width="20" height="30" fill="steelblue"></rect>
+        <rect x="105" width="20" height="60" fill="steelblue"></rect>
+    </svg> -->
+
+    <script>
+      var ratData = [40,90,30,60,20,49,100];
+
+      console.log (d3.selectAll ("rect"));
+
+      var w = 150;
+      var h = 175
+
+      var array/length = ratData,length;
+      var maxValue = d3.max(datData, function(d) { return +d});
+      var_xaxisLength = 100
+
+      var svg = d3.select ("body")
+        append("svg")
+        .attr("width",w)
+        .attr("height",h);
+
+        //when taking script, the script is differeent then teh svg, you have in insert your own svg.
+
+
+        svg.selectAll("rect")
+        //bind ratData to rectangles
+          .data(ratData)
+          .enter()
+          append()
+          .attr("x",funtion (d,i)
+            return 1*25+30;
+          .attr("y"),function (d){
+              return h-d;
+          })
+          .attr("width",20)
+          .attr("height",100)
+          .attr("fill","steelblue");
+         svg.append("line")
+            .attr("x1",30)
+            .attr("y1",75)
+            .attr("x2",30)
+            .attr("y2", 175)
+            .attr("stroke-width",2)
+            .attr("stroke","black");
+
+        svg.append("text")
+            .attr("class", "y label")
+            .attr("text-anchor", "end")
+            .text("no. of Rats")
+            .attr("transform", "translate(20,20)rotate(-90)")
+</script>
+
+
+
+      .data(ratData)
+      .attr("height", function(d){
+          return d;
+      });
+
+</body>
+</html>
